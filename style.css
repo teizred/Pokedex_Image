@@ -31,6 +31,7 @@ h1 {
   margin: 40px 20px 20px;
   font-weight: 900;
   color: #e5e5e5; /* soft light gray to match rainy lighting */
+  -webkit-text-stroke: 2px #000000; /* black outline around text */
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 0 40px rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(4px);
   border: 3px solid rgba(255, 255, 255, 0.6);
@@ -131,4 +132,16 @@ body::before {
   body {
     padding: 16px 10px;
   }
+}
+
+.footer {
+  position:absolute; bottom: 0;
+  padding: 12px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ffffff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 12px;
 }
