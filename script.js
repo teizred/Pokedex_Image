@@ -3,9 +3,11 @@ async function PokemonRes() {
     const input = document.getElementById("pokemonName");
     const name = input.value.trim().toLowerCase();
     const imgElement = document.getElementById("pokemonImage");
+    const infoElement = document.getElementById("pokemonInfo");
 
     if (!name) {
       imgElement.style.display = "none";
+      if (infoElement) infoElement.textContent = "";
       input.style.outline = "2px solid red";
       return;
     }
@@ -18,6 +20,7 @@ async function PokemonRes() {
 
     if (!pokemon) {
       imgElement.style.display = "none";
+      if (infoElement) infoElement.textContent = "";
       input.style.outline = "2px solid red"; /* red outline on failure */
       return;
     }
@@ -26,6 +29,13 @@ async function PokemonRes() {
     imgElement.src = pokemon.img;
     imgElement.alt = pokemon.name + " image";
     imgElement.style.display = "block";
+    if (infoElement) {
+      infoElement.innerHTML = `
+        <h2>${pokemon.name}</h2>
+        <p>Type: ${pokemon.type.join(", ")}</p>
+        <p>Weight: ${pokemon.weight}</p>
+      `;
+    }
   } catch (error) {
     console.error(error.message);
   }
