@@ -43,7 +43,7 @@ async function PokemonRes() {
           color = "#ffffff";                     // fallback if missing
         }
 
-        typeLabels += `<span class="type-label" style="color: ${color} !important;">${typeName}</span>`;
+        typeLabels += `<span class="type-label" style="background-color: ${color};">${typeName}</span>`;
 
         if (i < pokemon.type.length - 1) {
           typeLabels += ", ";

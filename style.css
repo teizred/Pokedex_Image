@@ -152,6 +152,17 @@ h1 {
   margin-top: 4px;
 }
 
+.type-label {
+  display: inline-block;
+  padding: 2px 10px;
+  margin: 0 3px;
+  border-radius: 999px;
+  color: #000;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-shadow: none;
+}
+
 body::before {
   content: "";
   position: fixed;
