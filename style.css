@@ -56,7 +56,9 @@ h1 {
 #pokemonName{
   font-family: "Story Script", cursive;
   font-size: 1.2rem;
+    margin-bottom: 20px;
 }
+
 
 .search {
   display: flex;
@@ -125,13 +127,6 @@ h1 {
   max-width: 60vw;
 }
 
-/* Pokémon info font styling */
-#pokemonInfo {
-  margin-top: 6px;
-  text-align: center;
-}
-
-/* Name (e.g. Spearow) */
 #pokemonInfo h2 {
   font-family: 'Pokemon Solid', sans-serif;
   font-size: 1.6rem;
