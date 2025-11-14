@@ -1,4 +1,4 @@
-
+import { typeColors } from "./colors.js";
 async function PokemonRes() {
   try {
     const input = document.getElementById("pokemonName");
@@ -26,14 +26,33 @@ async function PokemonRes() {
       return;
     }
 
+    // Success case: show image and colored type(s)
     input.style.outline = "2px solid #4ade80"; /* green outline on success */
     imgElement.src = pokemon.img;
     imgElement.alt = pokemon.name + " image";
     imgElement.style.display = "block";
+
     if (infoElement) {
+      let typeLabels = "";
+
+      for (let i = 0; i < pokemon.type.length; i++) {
+        let typeName = pokemon.type[i];          // e.g. "Fire"
+        let color = typeColors[typeName];        // lookup in colors.js
+
+        if (!color) {
+          color = "#ffffff";                     // fallback if missing
+        }
+
+        typeLabels += `<span class="type-label" style="color: ${color} !important;">${typeName}</span>`;
+
+        if (i < pokemon.type.length - 1) {
+          typeLabels += ", ";
+        }
+      }
+
       infoElement.innerHTML = `
         <h2>${pokemon.name}</h2>
-        <p>Type: ${pokemon.type.join(", ")}</p>
+        <p>Type: ${typeLabels}</p>
         <p>Weight: ${pokemon.weight}</p>
       `;
     }
