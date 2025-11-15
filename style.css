@@ -95,32 +95,27 @@ h1 {
   background: #ffffff;
   box-shadow: 0 0 0 3px rgba(68, 123, 232, 0.35);
 }
+
 #searchBtn {
-  width: 100%;                  
-  font-family: "Story Script", cursive;
-  padding: 0.9rem 1.6rem;
+  background: #447be8; 
+  color: #ffffff;
+  font-family: "Story Script", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 1000;
+  padding: 0.55rem 1.4rem; 
   border: none;
-  border-radius: 14px;           
-  background: linear-gradient(135deg, #447be8, #3a6cd1, #305cb8);
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.1rem;
+  border-radius: 15px;
   cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  box-shadow: 0 10px 25px rgba(68, 123, 232, 0.35);
-  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
-}
-#searchBtn:hover {
-  transform: translateY(-3px);
-  filter: brightness(1.1);
-  box-shadow: 0 14px 32px rgba(68, 123, 232, 0.5);
-}
-#searchBtn:active {
-  transform: translateY(1px) scale(0.97);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  display: block;           
+  margin: 10px auto;        
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: all 0.2s ease-in-out;
 }
 
+#searchBtn:hover {
+  background: #295ed1; 
+  transform: scale(1.05);
+}
 /* image hidden til searched */
 
 #pokemonImage {
