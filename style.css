@@ -1,6 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/pokemon-solid');
-@import url('https://fonts.googleapis.com/css2?family=Story+Script&display=swap');
-                
+@import url('https://fonts.googleapis.com/css2?family=Story+Script&display=swap');             
 
 * {
   box-sizing: border-box;
@@ -84,6 +83,7 @@ h1 {
   border: 1px solid #d1d5db;
   background: #f3f4f6;
   transition: all 0.2s ease;
+  text-align: center;
 }
 .search input:focus {
   outline: none;
@@ -135,7 +135,6 @@ h1 {
   -webkit-text-stroke: 2px #000000;
   text-shadow: 0 3px 10px rgba(0,0,0,0.7);
 }
-
 /* Type + weight lines */
 #pokemonInfo p {
   font-family: "Story Script", sans-serif;
@@ -156,6 +155,35 @@ h1 {
   font-weight: 700;
   font-size: 0.95rem;
   text-shadow: none;
+}
+
+.pokemon-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.evolution-nav {
+  display: flex;
+  gap: 6px;
+}
+
+.evolution-nav button {
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.75rem;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.9);
+  color: #111827;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.evolution-nav button:disabled {
+  opacity: 0.4;
+  cursor: default;
+  box-shadow: none;
 }
 
 body::before {
